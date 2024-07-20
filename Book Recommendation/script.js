@@ -67,7 +67,7 @@ function generatePrompt(answers) {
 }
 
 async function fetchBookRecommendations(prompt) {
-  const API_KEY = "AIzaSyCef4zvqH3OL76kGii4bVqmWTVdddswWYg"; // Replace with your Gemini API key
+  const API_KEY = ""; // Replace with your Gemini API key
   const genAI = new GoogleGenerativeAI(API_KEY);
 
   try {
