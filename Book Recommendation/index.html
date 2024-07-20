@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Recommendation Questionnaire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Book Recommendation Questionnaire</h1>
+  <form id="questionnaire">
+    <div class="questionnaire-section" id="section1">
+      <fieldset>
+        <legend>Reading Preferences - Page 1</legend>
+        <label for="genres">Which of the following genres do you enjoy the most? (Select all that apply)</label>
+            <div class="form-group">
+                <input type="checkbox" id="genre1" name="genre" value="Fantasy">
+                <label for="genre1" class="checkbox-label">Fantasy</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="genre2" name="genre" value="Science Fiction">
+                <label for="genre2" class="checkbox-label">Science Fiction</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="genre3" name="genre" value="Mystery">
+                <label for="genre3" class="checkbox-label">Mystery</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="genre4" name="genre" value="Horror">
+                <label for="genre4" class="checkbox-label">Horror</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="genre5" name="genre" value="Thriller">
+                <label for="genre5" class="checkbox-label">Thriller</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="genre6" name="genre" value="Romance">
+                <label for="genre6" class="checkbox-label">Romance</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="genre7" name="genre" value="Self-Help/Motivation">
+                <label for="genre7" class="checkbox-label">Self-Help/Motivation</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="genre8" name="genre" value="History/Biography">
+                <label for="genre8" class="checkbox-label">History/Biography</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="genre9" name="genre" value="Comedy/Humour">
+                <label for="genre9" class="checkbox-label">Comedy/Humour</label>
+            </div>
+        <!-- Add more genres as needed -->
+      </fieldset>
+
+      <fieldset>
+        <label>How often do you read books?</label>
+        <select name="frequency" id="frequency">
+          <option value="Daily">Daily</option>
+          <option value="A few times a week">A few times a week</option>
+          <option value="Reading is a hobby for me">Reading is a hobby for me</option>
+          <option value="I don't really read books">I don't really read books</option>
+          <option value="I live to read">I live to read</option>
+          <!-- Add more options as needed -->
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <label>What is your preferred book length?</label>
+        <select name="length" id="length">
+          <option value="Less than 200 pages">Less than 200 pages</option>
+          <option value="200-400 pages">200-400 pages</option>
+          <option value="400-800 pages">400-800 pages</option>
+          <option value="More than 800 pages">More than 800 pages</option>
+          <!-- Add more options as needed -->
+        </select>
+      </fieldset>
+
+      <button type="button" onclick="nextSection()">Next</button>
+    </div>
+
+    <div class="questionnaire-section" id="section2" style="display: none;">
+      
+
+      <fieldset>
+        <label>Do you prefer books that are plot-driven or character-driven?</label>
+        <select name="plotOrCharacter" id="plotOrCharacter">
+          <option value="Plot-driven">Plot-driven</option>
+          <option value="Character-driven">Character-driven</option>
+          <!-- Add more options as needed -->
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <label>What pacing do you prefer in a book?</label>
+        <select name="pacing" id="pacing">
+          <option value="Fast-paced">Fast-paced</option>
+          <option value="Medium-paced">Medium-paced</option>
+          <!-- Add more options as needed -->
+        </select>
+      </fieldset>
+
+      <button type="button" onclick="prevSection()">Previous</button>
+      <button type="button" onclick="nextSection()">Next</button>
+    </div>
+
+    <div class="questionnaire-section" id="section3" style="display: none;">
+      <fieldset>
+        <legend>Personality Assessment - Page 1</legend>
+        <label>Would you describe yourself as more of an introvert or an extrovert?</label>
+        <select name="introvertExtrovert" id="introvertExtrovert">
+          <option value="Introvert">Introvert</option>
+          <option value="Extrovert">Extrovert</option>
+          <!-- Add more options as needed -->
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <label>Do you prefer adventure and spontaneity or routine and predictability?</label>
+        <select name="adventureRoutine" id="adventureRoutine">
+          <option value="Adventure and spontaneity">Adventure and spontaneity</option>
+          <option value="Routine and predictability">Routine and predictability</option>
+          <!-- Add more options as needed -->
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <label>Do you make decisions based on emotions or logic?</label>
+        <select name="emotionsLogic" id="emotionsLogic">
+          <option value="Emotions">Emotions</option>
+          <option value="Logic">Logic</option>
+          <!-- Add more options as needed -->
+        </select>
+      </fieldset>
+
+      <button type="button" onclick="prevSection()">Previous</button>
+      <button type="button" onclick="nextSection()">Next</button>
+    </div>
+
+    <div class="questionnaire-section" id="section4" style="display: none;">
+      <fieldset>
+        <legend>Personality Assessment - Page 2</legend>
+        <label>Are you more of an optimist or a realist?</label>
+        <select name="optimistRealist" id="optimistRealist">
+          <option value="Optimist">Optimist</option>
+          <option value="Realist">Realist</option>
+          <!-- Add more options as needed -->
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <label>How do you handle conflict?</label>
+        <select name="conflict" id="conflict">
+          <option value="Avoid conflict and seek harmony">Avoid conflict and seek harmony</option>
+          <option value="Face conflict head-on">Face conflict head-on</option>
+          <!-- Add more options as needed -->
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <label>Do you prefer spending time alone or with others?</label>
+        <select name="aloneSocial" id="aloneSocial">
+          <option value="Alone">Alone</option>
+          <option value="With others">With others</option>
+          <!-- Add more options as needed -->
+        </select>
+      </fieldset>
+
+      <button type="button" onclick="prevSection()">Previous</button>
+      <button type="submit">Get Recommendations</button>
+    </div>
+  </form>
+  <div id="result"></div>
+  
+  <script src="page.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
